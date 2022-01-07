@@ -16,10 +16,11 @@ public class BoardHandler {
   }
 
   static final int LENGTH = 100;
-  static Board[] list = new Board[LENGTH]; 
-  static int size = 0;
 
-  public static void add() throws IOException {
+  Board[] list = new Board[LENGTH];
+  int size = 0;
+
+  public void add() throws IOException {
     System.out.println("[게시물 등록]");
     
     Board board = new Board();
@@ -35,7 +36,7 @@ public class BoardHandler {
     System.out.println("게시글을 등록하였습니다.");
   }
   
-  public static void list() {
+  public void list() {
     System.out.println("[게시물 목록]");
     
     for (int i = 0; i < size; i++) {
