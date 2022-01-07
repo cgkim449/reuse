@@ -1,5 +1,6 @@
 package com.cgkim449.reuse.handler;
 
+import com.cgkim449.reuse.domain.Board;
 import com.cgkim449.reuse.domain.Member;
 import com.cgkim449.util.ArrayList;
 import com.cgkim449.util.Prompt;
@@ -8,7 +9,7 @@ import java.io.IOException;
 
 public class MemberHandler {
 
-  ArrayList memberList = new ArrayList();
+  ArrayList<Member> memberList = new ArrayList<>();
 
   public void add() throws IOException {
     System.out.println("[회원 등록]");
@@ -28,24 +29,22 @@ public class MemberHandler {
   public void list() {
     System.out.println("[회원 목록]");
 
-    Object[] members = memberList.toArray();
+    Member[] members = memberList.toArray(Member[].class);
 
-    for (Object obj : members) {
-      Member member = (Member) obj;
+    for (Member member : members) {
       System.out.printf("%d, %s, %s, %s, %s\n",
-          member.getNo(),
-          member.getName(),
-          member.getEmail(),
-          member.getTel(),
-          member.getRegisteredDate());
+              member.getNo(),
+              member.getName(),
+              member.getEmail(),
+              member.getTel(),
+              member.getRegisteredDate());
     }
   }
 
   public Member findByName(String name) {
-    Object[] members = memberList.toArray();
+    Member[] members = memberList.toArray(Member[].class);
 
-    for (Object obj : members) {
-      Member member = (Member) obj;
+    for (Member member : members) {
       if (member.getName().equals(name)) {
         return member;
       }

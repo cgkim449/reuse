@@ -9,7 +9,7 @@ import java.sql.Date;
 
 public class BoardHandler {
 
-  ArrayList boardList = new ArrayList();
+  ArrayList<Board> boardList = new ArrayList<>();
 
   public void add() throws IOException {
     System.out.println("[게시물 등록]");
@@ -30,16 +30,15 @@ public class BoardHandler {
   public void list() {
     System.out.println("[게시물 목록]");
 
-    Object[] boards = boardList.toArray();
+    Board[] boards = boardList.toArray(Board[].class);
 
-    for (Object obj : boards) {
-      Board board = (Board) obj;
+    for (Board board : boards) {
       System.out.printf("%d, %s, %s, %s, %d\n",
-          board.getNo(),
-          board.getTitle(),
-          board.getWriter(),
-          board.getRegisteredDate(),
-          board.getViewCount());
+              board.getNo(),
+              board.getTitle(),
+              board.getWriter(),
+              board.getRegisteredDate(),
+              board.getViewCount());
     }
   }
 }
