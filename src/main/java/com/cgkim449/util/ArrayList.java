@@ -2,7 +2,7 @@ package com.cgkim449.util;
 
 import java.util.Arrays;
 
-public class ArrayList {
+public class ArrayList<E> {
     static final int DEFAULT_CAPACITY = 3;
     Object[] list;
     int size = 0;
@@ -19,17 +19,16 @@ public class ArrayList {
         }
     }
 
-    public void add(Object obj) {
+    public void add(E obj) {
         if (size == list.length) {
             int oldCapacity = list.length;
-            int newCapacity = oldCapacity + (oldCapacity / 2);
-
+            int newCapacity = oldCapacity + (oldCapacity >> 1);
             list = Arrays.copyOf(list, newCapacity);
         }
         list[size++] = obj;
     }
 
-    public Object[] toArray() {
-        return Arrays.copyOf(list, size);
+    public E[] toArray(Class<E[]> arrayType) {
+        return Arrays.copyOf(list, size, arrayType);
     }
 }
