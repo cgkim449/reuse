@@ -1,10 +1,13 @@
 package com.cgkim449.reuse.handler;
 
+import com.cgkim449.reuse.domain.Board;
 import com.cgkim449.reuse.domain.Member;
 import com.cgkim449.util.ArrayList;
 import com.cgkim449.util.Prompt;
 
 import java.io.IOException;
+import java.util.Iterator;
+import java.util.List;
 
 public class MemberHandler {
 
