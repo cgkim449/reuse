@@ -20,5 +20,6 @@
 - [ ] 05. 의존성 주입을 사용하여 재사용성을 높인다(인터페이스의 한계).
 
 ## 기타
-- [x] [01. 생성자를 사용하는 이유](https://github.com/cgkim449/reuse/blob/master/documents/99.%20%EC%83%9D%EC%84%B1%EC%9E%90%EB%A5%BC%20%EC%82%AC%EC%9A%A9%ED%95%98%EB%8A%94%20%EC%9D%B4%EC%9C%A0.md)
-- [x] [02. 캡슐화를 하는 이유](https://github.com/cgkim449/reuse/blob/master/documents/99.%20%EC%BA%A1%EC%8A%90%ED%99%94%EB%A5%BC%20%ED%95%98%EB%8A%94%20%EC%9D%B4%EC%9C%A0.md)
+- [ ] 01. 생성자를 사용하는 이유
+- [ ] 02. 캡슐화를 하는 이유
+- [ ] 03. 클래스를 내부클래스로 선언하는 이유
